@@ -72,6 +72,7 @@ def pdf_cap():
             else:
                 print(f"--->>> CREANDO CARPETA DE CUITS {pathcuits}.")
                 os.mkdir(pathcuits)
+                time.sleep(1)
                 os.mkdir(pathfechas)
                 time.sleep(1)
                 descarga_remitos(entregas, token, pathfechas)
@@ -83,8 +84,10 @@ def pdf_cap():
         os.mkdir(pathfechas2)
         shutil.copy(path,pathfechas2)
     except:
-        print(">>> Algo salio mal en la creacion de carpeta de Excel.")          
+        print(">>> Algo salio mal en la creacion de carpeta de Excel.")
+
+    return True   
             
-#---------------------------------------------------------fin-----------------------------------------------------------#
-if __name__=="__main__":
-    pdf_cap()    
+# #---------------------------------------------------------fin-----------------------------------------------------------#
+# if __name__=="__main__":
+#     pdf_cap()    
